@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEV.PORTFOLIO | MERN Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="prot.css" rel="stylesheet">
+<script src="prot.js" defer></script>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-grid"></div>
+  <div class="binary-rain" id="binaryRain"></div>
+  <div class="loader-content">
+    <div class="loader-logo">VIVEK.DEV</div>
+    <div class="loader-tagline">MERN Stack Developer</div>
+    <div class="loader-terminal">
+      <div class="terminal-lines" id="termLines">
+        <div class="t-line" id="l1"><span class="prompt">$ </span>initializing_system --mode=portfolio</div>
+        <div class="t-line" id="l2"><span class="success">✓</span> Node.js v20.x detected</div>
+        <div class="t-line" id="l3"><span class="success">✓</span> MongoDB connection established</div>
+        <div class="t-line" id="l4"><span class="success">✓</span> React 18.x loaded successfully</div>
+        <div class="t-line" id="l5"><span class="warning">⚡</span> Compiling developer profile...</div>
+        <div class="t-line" id="l6"><span class="prompt">$ </span>export NODE_ENV=<span class="success">IMPRESSIVE</span></div>
+        <div class="t-line" id="l7"><span class="success">✓</span> Portfolio ready. Welcome, Recruiter.</div>
+      </div>
+    </div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+    <div class="loader-pct" id="loaderPct">0%</div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main id="main">
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">VIVEK<span>.</span>DEV</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Hire Me</button>
+  </nav>
+
+  <!-- SCROLL DOTS -->
+  <div class="scroll-indicator">
+    <div class="scroll-dot active" onclick="scrollTo(0,0)"></div>
+    <div class="scroll-dot" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})"></div>
+    <div class="scroll-dot" onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})"></div>
+    <div class="scroll-dot" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})"></div>
+    <div class="scroll-dot" onclick="document.getElementById('experience').scrollIntoView({behavior:'smooth'})"></div>
+    <div class="scroll-dot" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})"></div>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <div class="hero-pre">Available for hire</div>
+      <h1 class="hero-name glitch" data-text="VIVEK">
+        VIVEK<br><span class="line2">SHEKHAWAT</span>
+      </h1>
+      <p class="hero-role">
+        Full-Stack Developer &middot; <span class="highlight">MERN Specialist</span> &middot; Open Source Contributor
+      </p>
+      <p class="hero-desc">
+        Building scalable web applications with MongoDB, Express, React & Node.js. 
+        I write clean code, ship fast, and solve complex problems with elegant solutions.
+      </p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-primary">
+          <span>↳</span> View Projects
+        </a>
+        <a href="#contact" class="btn-secondary">
+          <span>_</span> Get In Touch
+        </a>
+      </div>
+    </div>
+
+    
+
+    <div class="hero-terminal">
+      <div class="term-header">
+        <div class="term-dot" style="background:#ff5f56"></div>
+        <div class="term-dot" style="background:#ffbd2e"></div>
+        <div class="term-dot" style="background:#27c93f"></div>
+        <span style="margin-left:8px">vshekhawat136@gmail.com:~</span>
+      </div>
+      <div class="term-body">
+        <div class="term-line"><span class="p">const</span> <span class="v">dev</span> = {</div>
+        <div class="term-line" style="padding-left:16px"><span class="prop">name</span>: <span class="s">"VIVEK SHEKHAWAT"</span>,</div>
+        <div class="term-line" style="padding-left:16px"><span class="prop">stack</span>: <span class="s">"MERN"</span>,</div>
+        <div class="term-line" style="padding-left:16px"><span class="prop">coffee</span>: <span class="p">Infinity</span>,</div>
+        <div class="term-line" style="padding-left:16px"><span class="prop">bugs</span>: <span class="num">0</span>,</div>
+        <div class="term-line" style="padding-left:16px"><span class="prop">status</span>: <span class="s">"available"</span></div>
+        <div class="term-line">};</div>
+        <div class="term-line" style="margin-top:8px"><span class="p">$</span> <span class="blink">▋</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-label">01 About</div>
+    <h2 class="section-title reveal">Who I Am</h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>
+          I'm a <strong>Full-Stack MERN Developer</strong> with 4+ years of experience crafting 
+          high-performance web applications. I transform complex business requirements into 
+          elegant digital solutions.
+        </p>
+        <p>
+          My expertise spans from designing <strong>RESTful APIs</strong> with Express.js to 
+          architecting responsive React frontends. I'm obsessed with performance optimization,
+          clean architecture, and developer experience.
+        </p>
+        <p>
+          When I'm not pushing commits, I contribute to <strong>open source projects</strong>, 
+          write technical articles, and mentor junior developers. I believe great software 
+          is built by teams that communicate well.
+        </p>
+      </div>
+      <div class="about-code reveal">
+        <div class="code-header">
+          <div class="term-dot" style="background:#ff5f56;width:10px;height:10px;border-radius:50%"></div>
+          <div class="term-dot" style="background:#ffbd2e;width:10px;height:10px;border-radius:50%"></div>
+          <div class="term-dot" style="background:#27c93f;width:10px;height:10px;border-radius:50%"></div>
+          <span>about.js</span>
+        </div>
+        <div class="code-body">
+          <div class="code-line"><span class="ln">1</span><span class="cm">// Developer Profile</span></div>
+          <div class="code-line"><span class="ln">2</span><span class="kw">const</span> <span class="obj">VIVEK</span> = {</div>
+          <div class="code-line"><span class="ln">3</span>&nbsp;&nbsp;<span class="prop">location</span>: <span class="str">"San Francisco, CA"</span>,</div>
+          <div class="code-line"><span class="ln">4</span>&nbsp;&nbsp;<span class="prop">education</span>: <span class="str">"B.S. Computer Science"</span>,</div>
+          <div class="code-line"><span class="ln">5</span>&nbsp;&nbsp;<span class="prop">focus</span>: [</div>
+          <div class="code-line"><span class="ln">6</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"Full-Stack Development"</span>,</div>
+          <div class="code-line"><span class="ln">7</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"System Architecture"</span>,</div>
+          <div class="code-line"><span class="ln">8</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="str">"API Design"</span></div>
+          <div class="code-line"><span class="ln">9</span>&nbsp;&nbsp;],</div>
+          <div class="code-line"><span class="ln">10</span>&nbsp;&nbsp;<span class="prop">hire</span>: <span class="kw">true</span>,</div>
+          <div class="code-line"><span class="ln">11</span>&nbsp;&nbsp;<span class="fn">greet</span>() {</div>
+          <div class="code-line"><span class="ln">12</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="kw">return</span> <span class="str">`Let's build something.`</span></div>
+          <div class="code-line"><span class="ln">13</span>&nbsp;&nbsp;}</div>
+          <div class="code-line"><span class="ln">14</span>};</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="section-label">02 Skills</div>
+    <h2 class="section-title reveal">Tech Stack</h2>
+    <div class="skills-grid">
+      <div class="skill-card reveal" data-skill="95">
+        <div class="skill-icon">⚛️</div>
+        <div class="skill-name">React.js</div>
+        <div class="skill-desc">Hooks, Context API, Redux, React Query, Next.js, performance optimization & SSR</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="95"></div></div>
+        <div class="skill-pct">95% · Expert</div>
+      </div>
+      <div class="skill-card reveal" data-skill="92">
+        <div class="skill-icon">🟢</div>
+        <div class="skill-name">Node.js</div>
+        <div class="skill-desc">Event loop, streams, clustering, microservices architecture & performance tuning</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+        <div class="skill-pct">92% · Expert</div>
+      </div>
+      <div class="skill-card reveal" data-skill="90">
+        <div class="skill-icon">🍃</div>
+        <div class="skill-name">MongoDB</div>
+        <div class="skill-desc">Aggregation pipelines, indexing strategies, sharding, Mongoose ODM & Atlas</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+        <div class="skill-pct">90% · Expert</div>
+      </div>
+      <div class="skill-card reveal" data-skill="93">
+        <div class="skill-icon">🚂</div>
+        <div class="skill-name">Express.js</div>
+        <div class="skill-desc">REST APIs, GraphQL, WebSockets, JWT auth, middleware design & rate limiting</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="93"></div></div>
+        <div class="skill-pct">93% · Expert</div>
+      </div>
+      <div class="skill-card reveal" data-skill="85">
+        <div class="skill-icon">☁️</div>
+        <div class="skill-name">AWS / Cloud</div>
+        <div class="skill-desc">EC2, S3, Lambda, CloudFront, Docker, Kubernetes, CI/CD pipelines</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+        <div class="skill-pct">85% · Advanced</div>
+      </div>
+      <div class="skill-card reveal" data-skill="88">
+        <div class="skill-icon">🔷</div>
+        <div class="skill-name">TypeScript</div>
+        <div class="skill-desc">Advanced types, generics, decorators, strict mode, type-safe API contracts</div>
+        <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+        <div class="skill-pct">88% · Advanced</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-label">03 Projects</div>
+    <h2 class="section-title reveal">Selected Work</h2>
+    <div class="projects-grid">
+
+      <!-- Featured -->
+      <div class="project-card project-featured reveal">
+        <div class="project-img">
+          <div class="project-img-bg"></div>
+          <div class="project-num">01</div>
+          <div class="project-overlay imageProject1" >
+            <a href="https://www.vivekss.in" target="_blank" class="overlay-btn">↗ Live Demo</a>
+            <a href="#" class="overlay-btn">⌥ GitHub</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Socket.io</span>
+            <span class="tag">Redis</span>
+          </div>
+          <div class="project-name">NexusChat Platform</div>
+          <p class="project-desc">
+            A real-time collaboration platform supporting 10,000+ concurrent users. 
+            Features end-to-end encryption, file sharing, video calls, and threaded conversations.
+            Reduced latency by 60% through Redis caching and WebSocket optimization.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg"></div>
+          <div class="project-num">02</div>
+          <div class="project-overlay">
+            <a href="#" class="overlay-btn">↗ Live</a>
+            <a href="#" class="overlay-btn">⌥ Code</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">Next.js</span>
+            <span class="tag">Express</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">Stripe</span>
+          </div>
+          <div class="project-name">DevMarket</div>
+          <p class="project-desc">
+            Full-featured e-commerce platform for digital products. 
+            Stripe payments, seller dashboards, analytics & automated delivery.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg"></div>
+          <div class="project-num">03</div>
+          <div class="project-overlay">
+            <a href="#" class="overlay-btn">↗ Live</a>
+            <a href="#" class="overlay-btn">⌥ Code</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">OpenAI</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="project-name">CodeAssist AI</div>
+          <p class="project-desc">
+            AI-powered code review tool integrating GPT-4. Analyzes PRs, 
+            suggests improvements, detects bugs and security vulnerabilities automatically.
+          </p>
+        </div>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-img">
+          <div class="project-img-bg"></div>
+          <div class="project-num">04</div>
+          <div class="project-overlay">
+            <a href="#" class="overlay-btn">↗ Live</a>
+            <a href="#" class="overlay-btn">⌥ Code</a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">GraphQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">D3.js</span>
+          </div>
+          <div class="project-name">DataFlow Analytics</div>
+          <p class="project-desc">
+            Real-time analytics dashboard with interactive D3 visualizations,
+            custom reporting, and ML-powered predictions with GraphQL subscriptions.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-label">04 Experience</div>
+    <h2 class="section-title reveal">Work History</h2>
+    <div class="exp-timeline">
+      <div class="exp-item">
+        <div class="exp-period">2022 — PRESENT</div>
+        <div class="exp-role">Senior Full-Stack Engineer</div>
+        <div class="exp-company">TechVault Inc. · San Francisco, CA</div>
+        <div class="exp-desc">
+          Led development of microservices architecture serving 2M+ users. 
+          Architected React component library used across 6 products. 
+          Reduced API response times by 45% through query optimization and caching strategies. 
+          Mentored team of 5 junior developers.
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-period">2020 — 2022</div>
+        <div class="exp-role">MERN Stack Developer</div>
+        <div class="exp-company">Startup Labs · Remote</div>
+        <div class="exp-desc">
+          Built three SaaS products from 0 to 1, handling full-stack development solo.
+          Integrated payment systems, OAuth providers, and third-party APIs.
+          Deployed containerized apps on AWS with automated CI/CD pipelines.
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-period">2019 — 2020</div>
+        <div class="exp-role">Frontend Developer</div>
+        <div class="exp-company">Digital Agency XYZ · New York, NY</div>
+        <div class="exp-desc">
+          Developed responsive React applications for Fortune 500 clients.
+          Improved Core Web Vitals scores by 40%, resulting in higher SEO rankings.
+          Collaborated with design teams to implement pixel-perfect UI components.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-bg"></div>
+    <div class="contact-content">
+      <div class="section-label" style="justify-content:center">05 Contact</div>
+      <h2 class="section-title" style="text-align:center;margin-bottom:20px">Let's Build<br>Something.</h2>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:40px;letter-spacing:2px">
+        Open to full-time roles & freelance projects
+      </p>
+      <a href="mailto:VIVEK@dev.io" class="contact-email">vshekhawat136@gmail.com</a>
+      <div class="social-links">
+        <a href="https://github.com/vivek2221" target="_blank" class="social-link">GitHub</a>
+        <a href="https://www.linkedin.com/in/vivek-shekhawat-446762245" target="_blank" class="social-link">LinkedIn</a>
+        <a href="/resume.pdf" download="Resume.pdf" class="social-link">Resume ↓</a>
+      </div>
+    </div>
+    <div class="contact-big">AVAILABLE</div>
+  </section>
+
+  <footer>
+    <div>© 2025 VIVEK.DEV — Built with MERN</div>
+    <div style="color:var(--text-muted)">Designed & Coded by  VIVEK SHEKHAWAT</div>
+    <div style="color:var(--text-muted)">v2.0.1</div>
+  </footer>
+
+</main>
+</body>
+</html>
